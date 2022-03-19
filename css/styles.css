@@ -11299,3 +11299,10 @@ section {
   padding-top: 9rem;
   padding-bottom: 9rem;
 }
+
+.bg-image-full {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
