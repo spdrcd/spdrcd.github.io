@@ -1,0 +1,378 @@
+/*!
+ * theme-modern.css
+ * Cool-toned light theme layer for chiehc.com.
+ * Loaded AFTER css/styles.css so it overrides the base Bootstrap theme.
+ * Remove the <link> tag in index.html to revert to the original look.
+ */
+
+:root {
+    --c-bg:          #f6f8fc;
+    --c-surface:     #ffffff;
+    --c-surface-alt: #eef2f9;
+    --c-text:        #17222f;
+    --c-text-soft:   #55677c;
+    --c-text-muted:  #7b8b9e;
+    --c-border:      #dde5f0;
+    --c-accent:      #2f6fed;
+    --c-accent-2:    #12b5c9;
+    --c-accent-soft: #eaf1fe;
+    --c-gradient:    linear-gradient(120deg, #2f6fed 0%, #12b5c9 100%);
+    --c-radius:      12px;
+    --c-shadow:      0 1px 2px rgba(23, 34, 47, .04), 0 8px 24px rgba(23, 34, 47, .06);
+    --c-nav-h:       58px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--c-bg);
+    color: var(--c-text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                 "Hiragino Sans", "Noto Sans JP", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.005em;
+}
+
+/* ---------- Sticky navigation ---------- */
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    height: var(--c-nav-h);
+    background: rgba(246, 248, 252, .82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.site-nav .nav-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.site-nav .nav-brand {
+    font-weight: 600;
+    font-size: .95rem;
+    color: var(--c-text);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.site-nav .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.site-nav .nav-links::-webkit-scrollbar { display: none; }
+
+.site-nav .nav-links a {
+    display: block;
+    padding: .4rem .7rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--c-text-soft);
+    text-decoration: none;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: color .18s ease, background-color .18s ease;
+}
+
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible {
+    color: var(--c-accent);
+    background: var(--c-accent-soft);
+}
+
+@media (max-width: 767px) {
+    .site-nav .nav-brand { display: none; }
+    .site-nav .nav-inner { gap: 0; padding: 0 .75rem; }
+}
+
+/* ---------- Hero ---------- */
+
+header.bg-image-full {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+}
+
+header.bg-image-full::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(160deg, rgba(23, 34, 47, .78) 0%, rgba(20, 58, 110, .70) 55%, rgba(11, 96, 118, .66) 100%);
+}
+
+header.bg-image-full #myheader img {
+    border: 3px solid rgba(255, 255, 255, .85);
+    box-shadow: 0 10px 30px rgba(11, 30, 55, .35);
+}
+
+header.bg-image-full h1 {
+    letter-spacing: -0.02em;
+    font-size: clamp(1.6rem, 4vw, 2.3rem) !important;
+}
+
+header.bg-image-full > div > p {
+    color: rgba(255, 255, 255, .82) !important;
+    font-size: .95rem;
+    letter-spacing: .02em;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .25);
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: transform .2s ease, background-color .2s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, .24);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* ---------- Sections ---------- */
+
+section {
+    padding: 4.5rem 0;
+    scroll-margin-top: var(--c-nav-h);
+}
+
+section.bg-light {
+    background-color: var(--c-surface-alt) !important;
+}
+
+.section-title { margin-bottom: 2.25rem; }
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    letter-spacing: -0.02em;
+    color: var(--c-text);
+    padding-bottom: .6rem;
+    margin-bottom: .75rem;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--c-gradient);
+}
+
+.section-title p,
+section p.lead {
+    color: var(--c-text-soft);
+    font-size: 1rem;
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+#about h2.fst-italic {
+    font-style: normal !important;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+    padding-bottom: .6rem;
+}
+
+#about h2.fst-italic::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--c-gradient);
+}
+
+section a {
+    color: var(--c-accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(47, 111, 237, .28);
+    transition: border-color .18s ease;
+}
+
+section a:hover {
+    color: var(--c-accent);
+    border-bottom-color: var(--c-accent);
+}
+
+/* ---------- Resume / skills / community cards ---------- */
+
+.resume-title {
+    font-size: .8rem !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: var(--c-accent);
+    margin: 1.75rem 0 .9rem;
+}
+
+.resume-item {
+    position: relative;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--c-radius);
+    box-shadow: var(--c-shadow);
+    padding: 1.1rem 1.25rem 1.1rem 1.35rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.resume-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--c-gradient);
+    opacity: 0;
+    transition: opacity .22s ease;
+}
+
+.resume-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(23, 34, 47, .05), 0 14px 32px rgba(23, 34, 47, .09);
+}
+
+.resume-item:hover::before { opacity: 1; }
+
+.resume-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--c-text);
+    margin-bottom: .2rem;
+}
+
+.resume-item h5 {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .02em;
+    color: var(--c-accent);
+    background: var(--c-accent-soft);
+    padding: .15rem .55rem;
+    border-radius: 20px;
+    margin-bottom: .5rem;
+}
+
+.resume-item p em {
+    font-style: normal;
+    color: var(--c-text-muted);
+    font-size: .875rem;
+}
+
+.resume-item p { margin-bottom: .6rem; }
+
+.resume-item ul {
+    padding-left: 1.05rem;
+    margin-bottom: 0;
+}
+
+.resume-item li {
+    color: var(--c-text-soft);
+    font-size: .925rem;
+    line-height: 1.65;
+    margin-bottom: .35rem;
+}
+
+.resume-item li::marker { color: var(--c-accent-2); }
+
+.resume-item li:last-child { margin-bottom: 0; }
+
+/* Japanese and Chinese profile blocks read better slightly looser */
+[lang="ja"] .resume-item p,
+[lang="zh-Hant"] .resume-item p {
+    font-size: .92rem;
+    line-height: 1.95;
+    color: var(--c-text-soft);
+    letter-spacing: .01em;
+}
+
+/* ---------- Photo gallery ---------- */
+
+#gallery .photo-grid figure {
+    border-radius: var(--c-radius) !important;
+    border: 1px solid var(--c-border);
+    box-shadow: var(--c-shadow);
+    background: var(--c-surface) !important;
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+#gallery .photo-grid figure:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px rgba(23, 34, 47, .05), 0 16px 34px rgba(23, 34, 47, .11);
+}
+
+#gallery .photo-grid figcaption {
+    color: var(--c-text-muted) !important;
+    padding: .55rem .75rem .7rem !important;
+    font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+
+footer.bg-dark {
+    background: linear-gradient(120deg, #17222f 0%, #1c3350 60%, #14495c 100%) !important;
+    border-top: 1px solid var(--c-border);
+}
+
+footer.bg-dark p {
+    color: rgba(255, 255, 255, .68) !important;
+    font-size: .875rem;
+}
+
+/* ---------- Motion preferences ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .resume-item,
+    .resume-item::before,
+    #gallery .photo-grid figure,
+    #gallery .photo-grid img,
+    .social-links a {
+        transition: none;
+    }
+    .resume-item:hover,
+    #gallery .photo-grid figure:hover,
+    .social-links a:hover {
+        transform: none;
+    }
+}
