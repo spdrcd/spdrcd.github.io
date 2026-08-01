@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Onigiri">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6fed"/>
+      <stop offset="1" stop-color="#12b5c9"/>
+    </linearGradient>
+    <path id="rice" d="M32 13 L12 50 L52 50 Z"/>
+    <clipPath id="riceClip">
+      <use href="#rice" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+    </clipPath>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+
+  <use href="#rice" fill="#fdfeff" stroke="#fdfeff" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="0" y="40" width="64" height="16" fill="#17222f" clip-path="url(#riceClip)"/>
+
+  <ellipse cx="23" cy="32.5" rx="2.8" ry="1.9" fill="#ffa8be" opacity=".6"/>
+  <ellipse cx="41" cy="32.5" rx="2.8" ry="1.9" fill="#ffa8be" opacity=".6"/>
+
+  <ellipse cx="26.5" cy="27" rx="2.3" ry="3.1" fill="#17222f"/>
+  <ellipse cx="37.5" cy="27" rx="2.3" ry="3.1" fill="#17222f"/>
+
+  <path d="M29.4 31.6 Q32 34.5 34.6 31.6" fill="none" stroke="#17222f" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
