@@ -5,15 +5,18 @@
       <stop offset="1" stop-color="#12b5c9"/>
     </linearGradient>
     <path id="rice" d="M32 13 L12 50 L52 50 Z"/>
-    <clipPath id="riceClip">
-      <use href="#rice" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+    <clipPath id="band">
+      <rect x="0" y="40" width="64" height="24"/>
     </clipPath>
   </defs>
 
   <rect width="64" height="64" rx="14" fill="url(#g)"/>
 
   <use href="#rice" fill="#fdfeff" stroke="#fdfeff" stroke-width="7" stroke-linejoin="round"/>
-  <rect x="0" y="40" width="64" height="16" fill="#17222f" clip-path="url(#riceClip)"/>
+
+  <g clip-path="url(#band)">
+    <use href="#rice" fill="#17222f" stroke="#17222f" stroke-width="7" stroke-linejoin="round"/>
+  </g>
 
   <ellipse cx="23" cy="32.5" rx="2.8" ry="1.9" fill="#ffa8be" opacity=".6"/>
   <ellipse cx="41" cy="32.5" rx="2.8" ry="1.9" fill="#ffa8be" opacity=".6"/>
