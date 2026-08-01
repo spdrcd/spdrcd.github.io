@@ -13,9 +13,26 @@
         <!-- vendor css -->
         <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
         <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <!-- Modern cool-toned theme layer (loads last, overrides the base theme) -->
+        <link href="css/theme-modern.css" rel="stylesheet">
 
     </head>
     <body id="page-top">
+        <!-- Sticky nav -->
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <a class="nav-brand" href="#page-top">Chieh "Jack" Chen</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#profile-intl">日本語 &middot; 中文</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#gallery">Photos</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- Header-->
         <header class="py-5 bg-image-full" style="background-image: url('assets/pro-background.jpg')">
             <div id="myheader" class="text-center my-5">
@@ -148,7 +165,7 @@
         </section><!-- End Skills Section -->
 
         <!-- ======= Resume Section ======= -->
-        <section id="resume" class="resume">
+        <section id="resume" class="resume bg-light">
             <div class="container px-5">
 
                 <div class="section-title">
@@ -225,7 +242,7 @@
         </section><!-- End Resume Section -->
 
         <!-- ======= Community Section ======= -->
-        <section id="community" class="bg-light">
+        <section id="community">
             <div class="container px-5">
 
                 <div class="section-title">
@@ -275,7 +292,7 @@
         </section><!-- End Community Section -->
 
         <!-- ======= Beyond Work Section ======= -->
-        <section id="interests">
+        <section id="interests" class="bg-light">
             <div class="container px-5">
 
                 <div class="section-title">
@@ -297,7 +314,7 @@
             #gallery .photo-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                gap: 12px;
+                gap: 16px;
             }
             #gallery .photo-grid figure {
                 margin: 0;
@@ -322,7 +339,7 @@
                 #gallery .photo-grid img { height: 200px; }
             }
         </style>
-        <section id="gallery" class="bg-light">
+        <section id="gallery">
             <div class="container px-5">
 
                 <div class="section-title">
