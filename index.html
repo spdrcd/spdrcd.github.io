@@ -29,6 +29,7 @@
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#community">Community</a></li>
                     <li><a href="#gallery">Photos</a></li>
+                    <li><a href="#music">Music</a></li>
                 </ul>
             </div>
         </nav>
@@ -309,7 +310,7 @@
             </div>
         </section><!-- End Beyond Work Section -->
 
-        <!-- ======= Photography Section ======= -->
+        <!-- ======= Gallery + lightbox + music styles ======= -->
         <style>
             #gallery .photo-grid {
                 display: grid;
@@ -321,6 +322,11 @@
                 overflow: hidden;
                 border-radius: 6px;
                 background: #e9ecef;
+                cursor: zoom-in;
+            }
+            #gallery .photo-grid figure:focus-visible {
+                outline: 2px solid #2f6fed;
+                outline-offset: 3px;
             }
             #gallery .photo-grid img {
                 display: block;
@@ -338,13 +344,120 @@
             @media (max-width: 575px) {
                 #gallery .photo-grid img { height: 200px; }
             }
+
+            body.lb-open { overflow: hidden; }
+            .lightbox {
+                position: fixed;
+                inset: 0;
+                z-index: 2000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3.5rem 1rem 4.5rem;
+                background: rgba(14, 22, 33, .92);
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
+            }
+            .lightbox[hidden] { display: none; }
+            .lightbox .lb-stage {
+                margin: 0;
+                max-width: 100%;
+                max-height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .9rem;
+            }
+            .lightbox .lb-img {
+                max-width: min(1100px, 92vw);
+                max-height: 78vh;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 10px;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+            }
+            .lightbox .lb-caption {
+                color: rgba(255, 255, 255, .8);
+                font-size: .875rem;
+                text-align: center;
+            }
+            .lightbox button {
+                position: absolute;
+                background: rgba(255, 255, 255, .1);
+                border: 1px solid rgba(255, 255, 255, .25);
+                color: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+                line-height: 1;
+                transition: background-color .18s ease;
+            }
+            .lightbox button:hover { background: rgba(255, 255, 255, .22); }
+            .lightbox button:focus-visible { outline: 2px solid #7fb2ff; outline-offset: 2px; }
+            .lightbox .lb-close {
+                top: 1rem; right: 1rem;
+                width: 42px; height: 42px;
+                font-size: 1.5rem;
+            }
+            .lightbox .lb-nav {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 46px; height: 46px;
+                font-size: 1.9rem;
+            }
+            .lightbox .lb-prev { left: 1rem; }
+            .lightbox .lb-next { right: 1rem; }
+            @media (max-width: 575px) {
+                .lightbox .lb-nav { width: 38px; height: 38px; font-size: 1.5rem; }
+                .lightbox .lb-prev { left: .4rem; }
+                .lightbox .lb-next { right: .4rem; }
+            }
+
+            #music .music-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            #music .music-card {
+                background: #fff;
+                border: 1px solid #dde5f0;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 1px 2px rgba(23, 34, 47, .04), 0 8px 24px rgba(23, 34, 47, .06);
+            }
+            #music .music-frame {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                background: #0e1621;
+            }
+            #music .music-frame iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+            #music .music-meta { padding: .85rem 1rem 1rem; }
+            #music .music-meta h3 {
+                font-size: 1rem;
+                font-weight: 600;
+                margin: 0 0 .15rem;
+            }
+            #music .music-meta p {
+                font-size: .85rem;
+                color: #7b8b9e;
+                margin: 0;
+            }
         </style>
+
+        <!-- ======= Photography Section ======= -->
         <section id="gallery">
             <div class="container px-5">
 
                 <div class="section-title">
                     <h2>Through the Lens</h2>
-                    <p class="lead">Photos I took while travelling &mdash; Japan, Taiwan, and points in between.</p>
+                    <p class="lead">Photos I took while travelling &mdash; Japan, Taiwan, and points in between. Click any photo to expand it.</p>
                 </div>
 
                 <div class="photo-grid">
@@ -389,6 +502,50 @@
             </div>
         </section><!-- End Photography Section -->
 
+        <!-- ======= Music Section ======= -->
+        <section id="music" class="bg-light">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>On Repeat</h2>
+                    <p class="lead">Playlists I keep coming back to &mdash; house, trance, and a lot of Japanese pop. Hit play, or open them on <a href="https://music.youtube.com/channel/UCcNBhBVGVU4CQpJHfPUJqvA">YouTube Music</a>.</p>
+                </div>
+
+                <div class="music-grid">
+                    <article class="music-card">
+                        <div class="music-frame">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLidddGfRiwGwD-hcZPdWAbbBM9nIpY44X" title="trance music playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="music-meta">
+                            <h3>Trance</h3>
+                            <p>Long drives and long build-ups.</p>
+                        </div>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="music-frame">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLidddGfRiwGxnh73by501MqFu7OaNtn0N" title="pop music playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="music-meta">
+                            <h3>Pop</h3>
+                            <p>Mostly J-pop. T.M.Revolution, Daoko, SennaRin.</p>
+                        </div>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="music-frame">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLidddGfRiwGxV3kjOkpF87HVRSPyhCo41" title="hnk mix playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="music-meta">
+                            <h3>HNK Mix</h3>
+                            <p>What gets played at Houston Nihongo Kai events.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section><!-- End Music Section -->
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Chiehc.com 2026</p></div>
@@ -397,5 +554,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Gallery lightbox -->
+        <script src="js/site.js"></script>
     </body>
 </html>
