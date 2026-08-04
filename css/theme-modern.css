@@ -3,6 +3,12 @@
  * Warm, cool-toned theme layer for chiehc.com.
  * Loaded AFTER css/styles.css so it overrides the base Bootstrap theme.
  * Remove the <link> tag in index.html to revert to the original look.
+ *
+ * Note on !important: the base theme styles these components with
+ * two-class selectors (.resume .resume-item h4), which outrank the
+ * single-class selectors here regardless of load order. Rather than
+ * edit styles.css, the handful of properties that genuinely conflict
+ * are forced. Everything else relies on normal cascade.
  */
 
 :root {
@@ -167,7 +173,10 @@ section.bg-light {
     background-color: var(--c-surface-alt) !important;
 }
 
-.section-title { margin-bottom: 2.25rem; }
+.section-title {
+    margin-bottom: 2rem !important;
+    padding-bottom: 0 !important;
+}
 
 .section-title h2 {
     position: relative;
@@ -198,6 +207,8 @@ section p.lead {
     line-height: 1.8;
     font-weight: 400;
 }
+
+.section-title p { margin-bottom: 0 !important; }
 
 #about h2.fst-italic {
     font-style: normal !important;
@@ -232,25 +243,30 @@ section a:hover {
     border-bottom-color: var(--c-accent);
 }
 
-/* ---------- Cards ---------- */
+/* ---------- Cards ----------
+   The base theme gives .resume-item a coloured left border and styles its
+   headings large, blue and uppercase. These rules replace that treatment. */
 
 .resume-title {
-    font-size: .8rem !important;
-    font-weight: 600;
+    font-size: .78rem !important;
+    font-weight: 600 !important;
     text-transform: uppercase;
     letter-spacing: .09em;
-    color: var(--c-accent);
-    margin: 1.75rem 0 .9rem;
+    color: var(--c-accent) !important;
+    margin: 1.6rem 0 .75rem !important;
 }
+
+.resume-title:first-child { margin-top: 0 !important; }
 
 .resume-item {
     position: relative;
-    background: var(--c-surface);
-    border: 1px solid var(--c-border);
-    border-radius: var(--c-radius);
+    background: var(--c-surface) !important;
+    border: 1px solid var(--c-border) !important;
+    border-left: 1px solid var(--c-border) !important;
+    border-radius: var(--c-radius) !important;
     box-shadow: var(--c-shadow);
-    padding: 1.15rem 1.3rem 1.15rem 1.4rem;
-    margin-bottom: 1rem;
+    padding: 1.15rem 1.3rem !important;
+    margin: 0 0 1rem !important;
     overflow: hidden;
     transition: transform .2s ease, box-shadow .2s ease;
 }
@@ -275,22 +291,32 @@ section a:hover {
 .resume-item:hover::before { opacity: 1; }
 
 .resume-item h4 {
-    font-size: 1.02rem;
-    font-weight: 600;
-    color: var(--c-text);
-    margin-bottom: .2rem;
+    font-size: 1.02rem !important;
+    font-weight: 600 !important;
+    color: var(--c-text) !important;
+    text-transform: none !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.35 !important;
+    margin: 0 0 .4rem !important;
 }
 
 .resume-item h5 {
     display: inline-block;
-    font-size: .75rem;
-    font-weight: 500;
-    color: var(--c-accent);
+    font-size: .75rem !important;
+    font-weight: 500 !important;
+    color: var(--c-accent) !important;
     background: var(--c-accent-soft);
-    padding: .18rem .6rem;
+    padding: .18rem .6rem !important;
     border-radius: 999px;
-    margin-bottom: .5rem;
+    margin: 0 0 .55rem !important;
 }
+
+.resume-item p {
+    margin: 0 0 .6rem !important;
+    line-height: 1.65;
+}
+
+.resume-item p:last-child { margin-bottom: 0 !important; }
 
 .resume-item p em {
     font-style: normal;
@@ -298,23 +324,23 @@ section a:hover {
     font-size: .875rem;
 }
 
-.resume-item p { margin-bottom: .6rem; }
-
 .resume-item ul {
-    padding-left: 1.05rem;
-    margin-bottom: 0;
+    padding-left: 1.1rem !important;
+    margin: 0 !important;
+    list-style: disc;
 }
 
-.resume-item li {
+.resume-item ul li {
     color: var(--c-text-soft);
     font-size: .93rem;
-    line-height: 1.7;
-    margin-bottom: .35rem;
+    line-height: 1.65;
+    padding: 0 !important;
+    margin: 0 0 .4rem !important;
 }
 
-.resume-item li::marker { color: var(--c-warm); }
+.resume-item ul li::marker { color: var(--c-warm); }
 
-.resume-item li:last-child { margin-bottom: 0; }
+.resume-item ul li:last-child { margin-bottom: 0 !important; }
 
 [lang="ja"] .resume-item p,
 [lang="zh-Hant"] .resume-item p {
