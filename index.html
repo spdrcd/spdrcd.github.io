@@ -3,180 +3,625 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Chieh Jack Chen - personal portfolio homepage" />
-        <meta name="author" content="Chieh-Chih Jack Chen" />
-        <title>Chieh "Jack" Chen - Homepage</title>
+        <meta name="description" content="Chieh 'Jacky' Chen - backend software engineer, 8 years shipping production services, 6+ in Go. Houston, TX and open to remote. Profile in English, Japanese, and Chinese." />
+        <meta name="keywords" content="backend engineer, Golang, Go, gRPC, GraphQL, REST API, microservices, AWS, Kubernetes, CI/CD, Houston, ソフトウェアエンジニア, バックエンド, 軟體工程師, 後端" />
+        <meta name="author" content="Chieh-Chih Jacky Chen" />
+        <title>Chieh "Jacky" Chen - Backend Software Engineer</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet">
         <!-- vendor css -->
         <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
         <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-        
+        <!-- Modern cool-toned theme layer (loads last, overrides the base theme) -->
+        <link href="css/theme-modern.css" rel="stylesheet">
+
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container px-4">
-                <a class="navbar-brand" href="#page-top">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+        <!-- Sticky nav -->
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <a class="nav-brand" href="#page-top">Chieh "Jacky" Chen</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#profile-intl">日本語 &middot; 中文</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#gallery">Photos</a></li>
+                    <li><a href="#music">Music</a></li>
+                </ul>
             </div>
-        </nav> -->
+        </nav>
+
         <!-- Header-->
         <header class="py-5 bg-image-full" style="background-image: url('assets/pro-background.jpg')">
             <div id="myheader" class="text-center my-5">
-                <img class="img-fluid rounded-circle mb-2" style="max-width:15%" src="assets/chieh-pro.png" alt="..." />
-                <h1 class="text-white fs-3 fw-bolder">Chieh "Jack" Chen</h1>
-                <p class="text-white mb-2 fw-normal">Software Developer</p>
+                <img class="img-fluid rounded-circle mb-2" style="max-width:15%" src="assets/chieh-pro.png" alt="Chieh 'Jacky' Chen" />
+                <h1 class="text-white fs-3 fw-bolder">Chieh "Jacky" Chen</h1>
+                <p class="text-white mb-2 fw-normal">Backend Software Engineer &middot; Go &middot; Houston, TX &middot; Open to Remote (US)</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/chennibyo/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/chiehjchen/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/spdrcd" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="mailto:me@chiehc.com" class="email" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                    <a href="https://github.com/spdrcd" class="github" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/chiehjchen/" class="linkedin" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@chennibyo" class="youtube" aria-label="YouTube"><i class="bx bxl-youtube"></i></a>
+                    <a href="https://www.instagram.com/chennibyo/" class="instagram" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
                 </div>
             </div>
         </header>
+
         <!-- About section-->
         <section id="about">
             <div class="container px-1">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-9">
-                        <h2 class="fst-italic">About Chieh 'Jack' Chen...</h2>
+                        <h2 class="fst-italic">About Chieh 'Jacky' Chen...</h2>
                         <br>
-                        <!-- <h2></h2> -->
-                        
-                        <p class="lead">I am a seasoned polyglot software engineer who embarked on my coding journey with a passion for gaming. In my professional realm, I specialize in Back-End software development, bringing with me a wealth of experience in crafting solutions with RESTful API and microservice architecture. Currently, my primary programming languages of choice are Golang and C#, though I adeptly navigate through others such as C++, Python, and Ruby.
+                        <p class="lead">I am a backend software engineer with eight years shipping and operating production services, six of them in <a href="https://go.dev/">Go</a>. My depth is in distributed microservices, API design across REST, GraphQL, and gRPC, CI/CD automation, and cloud migration to AWS and Kubernetes. I own features end to end &mdash; design through production support &mdash; and I work comfortably across frontend, security, and business stakeholders.</p>
 
-                          Beyond the realm of coding, I am a self-taught Japanese speaker with a penchant for intellectual pursuits. When not immersed in the world of technology, I find joy in leisurely bike rides, relishing delectable experiences at quality Asian restaurants, and sharing moments of laughter with others.</p>
-                        <!-- <ul>
-                            <li>Clickable nav links that smooth scroll to page sections</li>
-                            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-                        </ul> -->
+                        <p class="lead">I came to this field the long way around, as a career changer with an M.S. in Computer Science earned at night while working full time. Most of my work lives in the parts of a system users never see: query layers, alerting pipelines, API contracts, build pipelines, and the debugging that keeps all of it honest. I have built for endpoint security forensics, oil and gas telemetry, and manufacturing floor hardware &mdash; domains where being wrong is expensive and the data does not wait for you.</p>
+
+                        <p class="lead">I speak English and Mandarin Chinese fluently, and Japanese at a business conversational level. Outside of work I founded and run <a href="https://nihongokai.org/">Houston Nihongo Kai</a>, a 501(c)(3) nonprofit that grew out of a Japanese language meetup. When I am not doing either of those things I am drawing, shooting <a href="https://www.youtube.com/@chennibyo">video</a>, listening to house and trance, planning a trip to Japan or Taiwan, or hunting down good food &mdash; which, as far as I am concerned, is only as good as the company you eat it with.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services section-->
-        <!-- <section class="bg-light" id="services">
-            <div class="container px-1">
+
+        <!-- ======= Multilingual Profile Section ======= -->
+        <section id="profile-intl" class="bg-light">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>日本語 &middot; 中文</h2>
+                    <p class="lead">A profile in Japanese and Chinese, for recruiters and teams who prefer to read it that way.</p>
+                </div>
+
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-9">
-                        <h2>Services we offer</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    <div class="col-lg-5" lang="ja">
+                        <h3 class="resume-title">日本語プロフィール</h3>
+                        <div class="resume-item pb-0">
+                            <p>バックエンドを専門とするソフトウェアエンジニアです。本番環境のサービス開発・運用に8年、うち6年以上を Go で担当してきました。現在は米国テキサス州ヒューストンを拠点に、リモートで働いています。</p>
+
+                            <p>得意分野は、分散マイクロサービスの設計、REST・GraphQL・gRPC による API 設計、CI/CD の自動化、そして AWS ・ Kubernetes へのクラウド移行です。設計から本番運用まで一貫して機能を所有し、フロントエンド・セキュリティ・事業部門との連携も得意です。</p>
+
+                            <p>現在は Cisco Systems にて、エンドポイントセキュリティ製品 Secure Endpoint / XDR Orbital の Go バックエンドを担当しています。以前は National Oilwell Varco で、石油・ガス業界向け監視プラットフォームの主力開発者として、マイクロサービス化、時系列データのレポート基盤、多チャネルアラート基盤を構築しました。</p>
+
+                            <p>コンピュータサイエンスの修士号を取得し、異業種からエンジニアに転身しました。言語は英語・中国語（北京語）が母語レベル、日本語はビジネス会話レベルです。ヒューストンでは日本語コミュニティ「<a href="https://nihongokai.org/">Houston Nihongo Kai</a>」（501(c)(3) 非営利団体）を設立・運営しています。</p>
+
+                            <p>ご連絡は <a href="mailto:me@chiehc.com">me@chiehc.com</a> までお願いします。</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5" lang="zh-Hant">
+                        <h3 class="resume-title">中文簡介</h3>
+                        <div class="resume-item pb-0">
+                            <p>我是一名後端軟體工程師，擁有八年開發與維運正式環境服務的經驗，其中六年以上使用 Go 語言。目前定居於美國德州休士頓，以遠端方式工作。</p>
+
+                            <p>專長包括分散式微服務架構設計、REST、GraphQL 與 gRPC 的 API 設計、CI/CD 自動化流程，以及將系統遷移至 AWS 與 Kubernetes。我習於從設計、實作到上線後的維運完整負責一項功能，並與前端、資安及業務單位緊密協作。</p>
+
+                            <p>目前任職於 Cisco Systems，負責端點資安產品 Secure Endpoint / XDR Orbital 的 Go 後端開發。先前於 National Oilwell Varco 擔任監控平台的主要後端開發者，負責微服務拆分、時序資料報表引擎與多管道警報系統。</p>
+
+                            <p>我擁有計算機科學碩士學位，是跨領域轉職投入軟體開發。英文與中文為母語程度，日文具備商務會話能力。同時在休士頓創辦並經營日語社群「<a href="https://nihongokai.org/">Houston Nihongo Kai</a>」（501(c)(3) 非營利組織）。</p>
+
+                            <p>歡迎來信：<a href="mailto:me@chiehc.com">me@chiehc.com</a></p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-        </section> -->
-        <!-- Contact section-->
-        <!-- <section id="contact">
-            <div class="container px-4">
+        </section><!-- End Multilingual Profile Section -->
+
+        <!-- ======= Skills Section ======= -->
+        <section id="skills">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>Skills &amp; Technologies</h2>
+                </div>
+
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Contact us</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                    <div class="col-lg-5">
+                        <h3 class="resume-title">Languages</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li><strong>Go</strong> &mdash; primary, 6+ years</li>
+                                <li>C# / .NET Core</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                                <li>C++, Ruby</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Backend &amp; APIs</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li>Distributed microservices</li>
+                                <li>REST, GraphQL, gRPC</li>
+                                <li>OpenAPI / Swagger contract design</li>
+                                <li>Event and alerting pipelines</li>
+                                <li>Modbus TCP</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Data</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li>PostgreSQL, MySQL</li>
+                                <li>MongoDB / DocumentDB</li>
+                                <li>Time-series data</li>
+                                <li>Query optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <h3 class="resume-title">Cloud &amp; Infrastructure</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li>AWS</li>
+                                <li>Kubernetes, Docker</li>
+                                <li>Linux / UNIX</li>
+                                <li>IIS</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">CI/CD &amp; Tooling</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li>GitHub Actions</li>
+                                <li>Git / GitHub, Bitbucket Pipelines</li>
+                                <li>Bamboo</li>
+                                <li>Jira, Postman</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Practices</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li>API contract design</li>
+                                <li>Code review</li>
+                                <li>Technical documentation</li>
+                                <li>Incident triage</li>
+                                <li>Agile / Scrum</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Spoken Languages</h3>
+                        <div class="resume-item pb-0">
+                            <ul>
+                                <li>English &mdash; fluent</li>
+                                <li>Mandarin Chinese &mdash; fluent &middot; 中文</li>
+                                <li>Japanese &mdash; business conversational &middot; 日本語</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
             </div>
-        </section> -->
+        </section><!-- End Skills Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-        <div class="container px-5">
-  
-          <div class="section-title">
-            <h2>Resume</h2>
-            <p class="lead">I currently work as a Back-End Software Engineer, using <a href="https://go.dev/">Go</a> Programming Language for backend services.</p>
-          </div>
-  
-          <div class="row gx-4 justify-content-center">
-            <div class="col-lg-5">
-              <h3 class="resume-title">Summary</h3>
-              <div class="resume-item pb-0">
-                <h4>Chieh "Jack" Chen</h4>
-                <!-- <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p> -->
-                <ul>
-                  <li>Houston, TX</li>
-                  <li>(832)738-2220</li>
-                  <li>me@chiehc.com</li>
-                </ul>
-              </div>
-  
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
-                <h4>Master of Science &amp; Computer Science</h4>
-                <h5>2015 - 2016</h5>
-                <p><em>University of Houston, Houston, TX</em></p>
-                <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
-              </div>
-              <div class="resume-item">
-                <h4>Bachelor of Arts &amp; Communications</h4>
-                <h5>208 - 2013</h5>
-                <p><em>University of Houston, Houston, TX</em></p>
-                <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
-              </div>
+        <!-- ======= Resume Section ======= -->
+        <section id="resume" class="resume bg-light">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>Resume</h2>
+                    <p class="lead">Eight years shipping and operating production backend services, six of them in Go.</p>
+                </div>
+
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-5">
+                        <h3 class="resume-title">Contact</h3>
+                        <div class="resume-item pb-0">
+                            <h4>Chieh "Jacky" Chen</h4>
+                            <ul>
+                                <li>Houston, TX &mdash; open to remote (US)</li>
+                                <li><a href="mailto:me@chiehc.com">me@chiehc.com</a> &mdash; personal</li>
+                                <li><a href="mailto:cchen@nihongokai.org">cchen@nihongokai.org</a> &mdash; Houston Nihongo Kai</li>
+                                <li><a href="https://www.linkedin.com/in/chiehjchen/">linkedin.com/in/chiehjchen</a></li>
+                                <li><a href="https://github.com/spdrcd">github.com/spdrcd</a></li>
+                                <li><a href="https://www.youtube.com/@chennibyo">youtube.com/@chennibyo</a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Education</h3>
+                        <div class="resume-item">
+                            <h4>M.S., Computer Science</h4>
+                            <h5>2018</h5>
+                            <p><em>University of Houston, Houston, TX</em></p>
+                            <ul>
+                                <li>Completed the evening program while working full time; self-funded through work, scholarships, and grants</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4>B.A., Communications &mdash; Minor in Global Business</h4>
+                            <h5>2013</h5>
+                            <p><em>University of Houston, Houston, TX</em></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <h3 class="resume-title">Professional Experience</h3>
+                        <div class="resume-item">
+                            <h4>Software Engineer</h4>
+                            <h5>May 2022 &ndash; Present</h5>
+                            <p><em>Cisco Systems, Inc. &mdash; Remote, US</em></p>
+                            <p>Go backend engineer on Cisco Secure Endpoint / XDR Orbital, an endpoint query and forensics platform used by enterprise security and IT investigation teams.</p>
+                            <ul>
+                                <li>Designed and shipped the custom Python scripting capability that lets IT and security investigators run scripts against managed endpoints across an organization to collect forensic data at scale</li>
+                                <li>Build and maintain the GraphQL and REST endpoints backing the product UI, including the SQL query layer, data transformation, and response shaping</li>
+                                <li>Partner directly with the frontend team on feature design and API contracts, translating UI requirements into GraphQL schema and backend query design</li>
+                                <li>Maintain MITRE ATT&amp;CK categorization across OS queries and scripts, updating the schema and taxonomy as new techniques and mappings are published</li>
+                                <li>Author and maintain Swagger / OpenAPI specifications; triage and resolve work from the GitHub issue queue</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Backend Application Developer</h4>
+                            <h5>Jan 2019 &ndash; May 2022</h5>
+                            <p><em><a href="https://www.nov.com/">National Oilwell Varco</a> &mdash; Houston, TX</em></p>
+                            <p>Lead backend feature developer on NOV's MAX monitoring suite &mdash; Go and C# microservices delivering real-time drilling and fracking telemetry to field operators, built inside an internal startup group.</p>
+                            <ul>
+                                <li>Delivered a $500K client program: decomposed a legacy C# application into deployable microservices with a centralized backend and a versioning scheme that unblocked independent release cadence</li>
+                                <li>Built the reporting engine &mdash; parameterized time-series queries generating PDF summary reports with Highcharts visualizations, used daily by drilling and fracking operators</li>
+                                <li>Built multi-channel alerting on streaming telemetry thresholds, delivering to SMS, email, and the customer web portal</li>
+                                <li>Key contributor to the operations scheduler used to plan and coordinate oil and gas field jobs</li>
+                                <li>Owned 10+ automated build and deploy pipelines, cutting manual release steps out of the team's delivery process</li>
+                                <li>Migrated the C# application, 10 microservices, and 4 databases to AWS Kubernetes, including networking and firewall troubleshooting through cutover</li>
+                                <li>Defined API contracts in Postman and Swagger; translated business-unit requirements into actionable UI/UX and engineering stories</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Software Engineer</h4>
+                            <h5>Jun 2018 &ndash; Dec 2018</h5>
+                            <p><em><a href="https://towworks.com/">TowWorks</a> &mdash; Lake Jackson, TX</em></p>
+                            <ul>
+                                <li>Built and shipped client-facing reporting tools serving 1,000+ paying customers</li>
+                                <li>Used SQL and JSON parsing to drive a proprietary report generator</li>
+                                <li>Validated business-critical functionality for barge clients ahead of each release</li>
+                                <li>Led the redesign and implementation of the company homepage in Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Software Engineering Intern</h4>
+                            <h5>Summer 2017</h5>
+                            <p><em><a href="https://ao-inc.com/">Applied Optoelectronics</a> &mdash; Sugar Land, TX</em></p>
+                            <ul>
+                                <li>Built an equipment sensor monitoring application in JavaScript and .NET over Modbus TCP for manufacturing-floor hardware</li>
+                                <li>Developed SQL and MES data reports from requirements gathered in SAP integration meetings</li>
+                                <li>Demoed a working proof of concept to the internal team, earning a return offer the following year</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-lg-5">
-              <h3 class="resume-title">Professional Experience</h3>
-              <div class="resume-item">
-                <h4>Software Engineer</h4>
-                <h5>2022 - Present</h5>
-                <p><em>Cisco Systems, Inc.</em></p>
-                <ul>
-                  <!-- <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li> -->
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Software Developer - BackEnd</h4>
-                <h5>2018 - 2022</h5>
-                <p><em>National Oilwell Varco, Houston, TX </em></p>
-                <ul>
-                  <!-- <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li> -->
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Contract Programmer</h4>
-                <h5>2017 - 2018</h5>
-                <p><em>Towworks, Lackjackson, TX</em></p>
-                <ul>
-                  <!-- <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li> -->
-                </ul>
-              </div>
+        </section><!-- End Resume Section -->
+
+        <!-- ======= Community Section ======= -->
+        <section id="community">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>Community Leadership</h2>
+                    <p class="lead">Work I do outside of work &mdash; building communities in Houston around language, technology, and showing up for each other.</p>
+                </div>
+
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-5">
+                        <h3 class="resume-title">Houston Nihongo Kai</h3>
+                        <div class="resume-item">
+                            <h4>Founder &amp; Organizer</h4>
+                            <h5>Current</h5>
+                            <p><em>501(c)(3) nonprofit &mdash; <a href="https://nihongokai.org/">nihongokai.org</a> &middot; <a href="https://www.youtube.com/@nihongohtx">YouTube</a> &middot; <a href="mailto:cchen@nihongokai.org">cchen@nihongokai.org</a></em></p>
+                            <ul>
+                                <li>Grew a casual language meetup into a registered 501(c)(3) with recurring programming: monthly socials, beginner Japanese grammar classes, English conversation (eikaiwa) for Japanese residents of Houston, university club collaborations, and group volunteering</li>
+                                <li>Secured funding and run ongoing operations, programming, and volunteer coordination</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <h3 class="resume-title">Code4YALL</h3>
+                        <div class="resume-item">
+                            <h4>Community Ambassador</h4>
+                            <h5>Through 2025</h5>
+                            <p><em>Houston developer community &mdash; <a href="https://code4yall.com/">code4yall.com</a></em></p>
+                            <ul>
+                                <li>Recognized by the founders as a key ambassador; recruited speakers and programmed technical talks, and presented a fireside chat on breaking into the tech industry</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Taiwanese Junior Chamber of Commerce</h3>
+                        <div class="resume-item">
+                            <h4>Volunteer &mdash; Houston Chapter</h4>
+                            <ul>
+                                <li>Established and ran the organization's social presence (Instagram / Threads, Linktree), produced event flyers, and maintained the WordPress site</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-  
-        </div>
-      </section><!-- End Resume Section -->
-  
-  
-      <section></section>
+        </section><!-- End Community Section -->
 
+        <!-- ======= Beyond Work Section ======= -->
+        <section id="interests" class="bg-light">
+            <div class="container px-5">
 
+                <div class="section-title">
+                    <h2>Beyond Work</h2>
+                </div>
 
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="lead">I draw, and I shoot photo and video &mdash; some of the video ends up on <a href="https://www.youtube.com/@chennibyo">my channel</a>. I listen to a lot of EDM, house, and trance. I watch anime. I travel &mdash; Japan and Taiwan most often, and as much of the US as I can manage. Outdoors I am usually swimming, hiking, climbing something, or soaking in a hot spring afterward.</p>
+                        <p class="lead">Above all of it, though, I am a foodie. And what good is good food without good friends? I like to enjoy my friends' company just as much as the meal.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Beyond Work Section -->
+
+        <!-- ======= Gallery + lightbox + music styles ======= -->
+        <style>
+            #gallery .photo-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 16px;
+            }
+            #gallery .photo-grid figure {
+                margin: 0;
+                overflow: hidden;
+                border-radius: 6px;
+                background: #e9ecef;
+                cursor: zoom-in;
+            }
+            #gallery .photo-grid figure:focus-visible {
+                outline: 2px solid #2f6fed;
+                outline-offset: 3px;
+            }
+            #gallery .photo-grid img {
+                display: block;
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                transition: transform .35s ease;
+            }
+            #gallery .photo-grid figure:hover img { transform: scale(1.04); }
+            #gallery .photo-grid figcaption {
+                font-size: .8rem;
+                color: #6c757d;
+                padding: .4rem .1rem 0;
+            }
+            @media (max-width: 575px) {
+                #gallery .photo-grid img { height: 200px; }
+            }
+
+            body.lb-open { overflow: hidden; }
+            .lightbox {
+                position: fixed;
+                inset: 0;
+                z-index: 2000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3.5rem 1rem 4.5rem;
+                background: rgba(14, 22, 33, .92);
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
+            }
+            .lightbox[hidden] { display: none; }
+            .lightbox .lb-stage {
+                margin: 0;
+                max-width: 100%;
+                max-height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .9rem;
+            }
+            .lightbox .lb-img {
+                max-width: min(1100px, 92vw);
+                max-height: 78vh;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 10px;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+            }
+            .lightbox .lb-caption {
+                color: rgba(255, 255, 255, .8);
+                font-size: .875rem;
+                text-align: center;
+            }
+            .lightbox button {
+                position: absolute;
+                background: rgba(255, 255, 255, .1);
+                border: 1px solid rgba(255, 255, 255, .25);
+                color: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+                line-height: 1;
+                transition: background-color .18s ease;
+            }
+            .lightbox button:hover { background: rgba(255, 255, 255, .22); }
+            .lightbox button:focus-visible { outline: 2px solid #7fb2ff; outline-offset: 2px; }
+            .lightbox .lb-close {
+                top: 1rem; right: 1rem;
+                width: 42px; height: 42px;
+                font-size: 1.5rem;
+            }
+            .lightbox .lb-nav {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 46px; height: 46px;
+                font-size: 1.9rem;
+            }
+            .lightbox .lb-prev { left: 1rem; }
+            .lightbox .lb-next { right: 1rem; }
+            @media (max-width: 575px) {
+                .lightbox .lb-nav { width: 38px; height: 38px; font-size: 1.5rem; }
+                .lightbox .lb-prev { left: .4rem; }
+                .lightbox .lb-next { right: .4rem; }
+            }
+
+            #music .music-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            #music .music-card {
+                background: #fff;
+                border: 1px solid #dde5f0;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 1px 2px rgba(23, 34, 47, .04), 0 8px 24px rgba(23, 34, 47, .06);
+            }
+            #music .music-frame {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                background: #0e1621;
+            }
+            #music .music-frame iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+            #music .music-meta { padding: .85rem 1rem 1rem; }
+            #music .music-meta h3 {
+                font-size: 1rem;
+                font-weight: 600;
+                margin: 0 0 .15rem;
+            }
+            #music .music-meta p {
+                font-size: .85rem;
+                color: #7b8b9e;
+                margin: 0;
+            }
+        </style>
+
+        <!-- ======= Photography Section ======= -->
+        <section id="gallery">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>Through the Lens</h2>
+                    <p class="lead">Photos I took while travelling &mdash; Japan, Taiwan, and points in between. Click any photo to expand it. Moving pictures live on <a href="https://www.youtube.com/@chennibyo">my YouTube channel</a>.</p>
+                </div>
+
+                <div class="photo-grid">
+                    <figure>
+                        <img src="assets/photos/temple-approach.jpg" alt="Wooden bridge leading to a temple gate surrounded by green trees, Japan" loading="lazy" width="1200" height="900" />
+                        <figcaption>Temple approach, Japan</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/hydrangea-road.jpg" alt="Blue hydrangeas blooming along a narrow roadside path" loading="lazy" width="900" height="1200" />
+                        <figcaption>Hydrangea season</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/haneda-apron.jpg" alt="ANA and Garuda Indonesia aircraft on the apron at a Japanese airport" loading="lazy" width="1200" height="900" />
+                        <figcaption>On the apron</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/lantern-food-street.jpg" alt="Crowded food street under rows of red and orange paper lanterns" loading="lazy" width="900" height="1200" />
+                        <figcaption>Food street, under the lanterns</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/wish-ribbons.jpg" alt="A wall of red wish ribbons and prayer tablets surrounding a bronze bell" loading="lazy" width="1200" height="900" />
+                        <figcaption>Wall of wishes</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/taipei101-alley.jpg" alt="Taipei 101 framed in the gap between two apartment buildings" loading="lazy" width="900" height="1200" />
+                        <figcaption>Taipei 101, framed</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/taipei101-skyline.jpg" alt="Taipei skyline with Taipei 101 seen from a hillside" loading="lazy" width="1200" height="900" />
+                        <figcaption>Taipei from above</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/window-bars.jpg" alt="Taiwanese apartment blocks seen through vertical window bars" loading="lazy" width="900" height="1200" />
+                        <figcaption>Through the bars</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/rail-construction.jpg" alt="Cranes and heavy equipment at a railway construction site beside a passing train" loading="lazy" width="1200" height="900" />
+                        <figcaption>Rail works in progress</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </section><!-- End Photography Section -->
+
+        <!-- ======= Music Section ======= -->
+        <section id="music" class="bg-light">
+            <div class="container px-5">
+
+                <div class="section-title">
+                    <h2>On Repeat</h2>
+                    <p class="lead">Playlists I keep coming back to &mdash; house, trance, and a lot of Japanese pop. Hit play, or find them on <a href="https://www.youtube.com/@chennibyo">my channel</a>.</p>
+                </div>
+
+                <div class="music-grid">
+                    <article class="music-card">
+                        <div class="music-frame">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLidddGfRiwGwD-hcZPdWAbbBM9nIpY44X" title="trance music playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="music-meta">
+                            <h3>Trance</h3>
+                            <p>Long drives and long build-ups.</p>
+                        </div>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="music-frame">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLidddGfRiwGxnh73by501MqFu7OaNtn0N" title="pop music playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="music-meta">
+                            <h3>Pop</h3>
+                            <p>Mostly J-pop. T.M.Revolution, Daoko, SennaRin.</p>
+                        </div>
+                    </article>
+
+                    <article class="music-card">
+                        <div class="music-frame">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLidddGfRiwGxV3kjOkpF87HVRSPyhCo41" title="hnk mix playlist" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="music-meta">
+                            <h3>HNK Mix</h3>
+                            <p>What gets played at <a href="https://www.youtube.com/@nihongohtx">Houston Nihongo Kai</a> events.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section><!-- End Music Section -->
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Chiehc.com 2022</p></div>
+            <div class="container px-4">
+                <p class="m-0 text-center text-white">
+                    <a href="mailto:me@chiehc.com">me@chiehc.com</a> &middot;
+                    <a href="https://github.com/spdrcd">GitHub</a> &middot;
+                    <a href="https://www.linkedin.com/in/chiehjchen/">LinkedIn</a> &middot;
+                    <a href="https://www.youtube.com/@chennibyo">YouTube</a> &middot;
+                    <a href="https://www.instagram.com/chennibyo/">Instagram</a>
+                </p>
+                <p class="m-0 mt-2 text-center text-white">
+                    Houston Nihongo Kai &mdash;
+                    <a href="https://nihongokai.org/">nihongokai.org</a> &middot;
+                    <a href="https://www.youtube.com/@nihongohtx">YouTube</a>
+                </p>
+                <p class="m-0 mt-2 text-center text-white">Copyright &copy; Chiehc.com 2026</p>
+            </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Gallery lightbox -->
+        <script src="js/site.js"></script>
     </body>
 </html>
