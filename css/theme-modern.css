@@ -4,11 +4,25 @@
  * Loaded AFTER css/styles.css so it overrides the base Bootstrap theme.
  * Remove the <link> tag in index.html to revert to the original look.
  *
- * Note on !important: the base theme styles these components with
- * two-class selectors (.resume .resume-item h4), which outrank the
- * single-class selectors here regardless of load order. Rather than
- * edit styles.css, the handful of properties that genuinely conflict
- * are forced. Everything else relies on normal cascade.
+ * Overriding the base theme
+ * -------------------------
+ * styles.css is the Start Bootstrap "iPortfolio" resume template. Its rules
+ * live around line 11331 and look like this:
+ *
+ *     .resume .resume-item        { border-left: 2px solid #0563bb; }
+ *     .resume .resume-item h4     { font-size: 18px; text-transform: uppercase;
+ *                                   color: #0563bb; }
+ *     .resume .resume-item::before{ width: 16px; height: 16px; border-radius: 50px;
+ *                                   left: -9px; border: 2px solid #0563bb; }
+ *
+ * That last one is a timeline dot, and it is the reason a blue circle kept
+ * appearing on the cards: the rule here used to target .resume-item::before
+ * with no !important, so at two-class specificity the template won.
+ *
+ * Every override below is therefore written twice - once bare, once scoped to
+ * .resume - so it wins on specificity alone, with !important as a backstop for
+ * the properties that genuinely conflict. Nothing in styles.css uses
+ * !important, so this is sufficient.
  */
 
 :root {
@@ -189,15 +203,22 @@ section.bg-light {
     margin-bottom: .75rem;
 }
 
+/* The template centres section headings with a 120px rule and a 40px bar,
+   both absolutely positioned from 50%. Neutralise the wide rule and re-anchor
+   the bar to the left so it sits under the left-aligned heading. */
+.section-title h2::before {
+    display: none !important;
+}
+
 .section-title h2::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 0 !important;
     bottom: 0;
-    width: 56px;
-    height: 4px;
+    width: 56px !important;
+    height: 4px !important;
     border-radius: 4px;
-    background: var(--c-gradient);
+    background: var(--c-gradient) !important;
 }
 
 .section-title p,
@@ -243,11 +264,10 @@ section a:hover {
     border-bottom-color: var(--c-accent);
 }
 
-/* ---------- Cards ----------
-   The base theme gives .resume-item a coloured left border and styles its
-   headings large, blue and uppercase. These rules replace that treatment. */
+/* ---------- Cards ---------- */
 
-.resume-title {
+.resume-title,
+.resume .resume-title {
     font-size: .78rem !important;
     font-weight: 600 !important;
     text-transform: uppercase;
@@ -256,9 +276,11 @@ section a:hover {
     margin: 1.6rem 0 .75rem !important;
 }
 
-.resume-title:first-child { margin-top: 0 !important; }
+.resume-title:first-child,
+.resume .resume-title:first-child { margin-top: 0 !important; }
 
-.resume-item {
+.resume-item,
+.resume .resume-item {
     position: relative;
     background: var(--c-surface) !important;
     border: 1px solid var(--c-border) !important;
@@ -271,26 +293,39 @@ section a:hover {
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.resume-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--c-gradient);
+/* Replaces the template's 16px timeline dot with a full-height accent bar
+   that fades in on hover. Every geometry property the dot set is reset. */
+.resume-item::before,
+.resume .resume-item::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 4px !important;
+    height: auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: var(--c-gradient) !important;
     opacity: 0;
     transition: opacity .22s ease;
 }
 
-.resume-item:hover {
+.resume-item:hover,
+.resume .resume-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 2px 4px rgba(27, 37, 50, .05), 0 16px 34px rgba(27, 37, 50, .09);
 }
 
-.resume-item:hover::before { opacity: 1; }
+.resume-item:hover::before,
+.resume .resume-item:hover::before { opacity: 1; }
 
-.resume-item h4 {
+.resume-item:last-child,
+.resume .resume-item:last-child { padding-bottom: 1.15rem !important; }
+
+.resume-item h4,
+.resume .resume-item h4 {
+    font-family: inherit !important;
     font-size: 1.02rem !important;
     font-weight: 600 !important;
     color: var(--c-text) !important;
@@ -300,37 +335,43 @@ section a:hover {
     margin: 0 0 .4rem !important;
 }
 
-.resume-item h5 {
+.resume-item h5,
+.resume .resume-item h5 {
     display: inline-block;
     font-size: .75rem !important;
     font-weight: 500 !important;
     color: var(--c-accent) !important;
-    background: var(--c-accent-soft);
+    background: var(--c-accent-soft) !important;
     padding: .18rem .6rem !important;
     border-radius: 999px;
     margin: 0 0 .55rem !important;
 }
 
-.resume-item p {
+.resume-item p,
+.resume .resume-item p {
     margin: 0 0 .6rem !important;
     line-height: 1.65;
 }
 
-.resume-item p:last-child { margin-bottom: 0 !important; }
+.resume-item p:last-child,
+.resume .resume-item p:last-child { margin-bottom: 0 !important; }
 
-.resume-item p em {
+.resume-item p em,
+.resume .resume-item p em {
     font-style: normal;
     color: var(--c-text-muted);
     font-size: .875rem;
 }
 
-.resume-item ul {
+.resume-item ul,
+.resume .resume-item ul {
     padding-left: 1.1rem !important;
     margin: 0 !important;
     list-style: disc;
 }
 
-.resume-item ul li {
+.resume-item ul li,
+.resume .resume-item ul li {
     color: var(--c-text-soft);
     font-size: .93rem;
     line-height: 1.65;
@@ -338,9 +379,11 @@ section a:hover {
     margin: 0 0 .4rem !important;
 }
 
-.resume-item ul li::marker { color: var(--c-warm); }
+.resume-item ul li::marker,
+.resume .resume-item ul li::marker { color: var(--c-warm); }
 
-.resume-item ul li:last-child { margin-bottom: 0 !important; }
+.resume-item ul li:last-child,
+.resume .resume-item ul li:last-child { margin-bottom: 0 !important; }
 
 [lang="ja"] .resume-item p,
 [lang="zh-Hant"] .resume-item p {
@@ -349,24 +392,29 @@ section a:hover {
     color: var(--c-text-soft);
 }
 
-/* ---------- Side photo ---------- */
+/* ---------- Side photo ----------
+   Constrained and un-rotated. The template sets `section { overflow: hidden }`,
+   so a rotated element that overhangs its column gets clipped rather than
+   flowing, which is what made this overlap the text beside it. */
 
 .side-photo {
     display: block;
     width: 100%;
+    max-width: 340px;
     height: auto;
+    margin: 0 auto;
     border-radius: var(--c-radius);
     border: 1px solid var(--c-border);
     box-shadow: var(--c-shadow);
-    transform: rotate(-1.5deg);
     transition: transform .3s ease;
 }
 
-.side-photo:hover { transform: rotate(0deg) translateY(-3px); }
+.side-photo:hover { transform: translateY(-3px); }
 
 .photo-note {
-    display: inline-block;
-    margin-top: .85rem;
+    display: block;
+    width: fit-content;
+    margin: .85rem auto 0;
     padding: .3rem .75rem;
     font-size: .8rem;
     color: #9a5a17;
@@ -412,7 +460,9 @@ footer.bg-dark p {
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .resume-item,
+    .resume .resume-item,
     .resume-item::before,
+    .resume .resume-item::before,
     .side-photo,
     #gallery .photo-grid figure,
     #gallery .photo-grid img,
@@ -420,9 +470,10 @@ footer.bg-dark p {
         transition: none;
     }
     .resume-item:hover,
+    .resume .resume-item:hover,
+    .side-photo:hover,
     #gallery .photo-grid figure:hover,
     .social-links a:hover {
         transform: none;
     }
-    .side-photo { transform: none; }
 }
